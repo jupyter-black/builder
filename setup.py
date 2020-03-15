@@ -8,7 +8,7 @@ short_description = long_description.split("\n")[1].replace("\\", "")
 
 setuptools.setup(
     name="jblack",
-    version="1.0",
+    version="1.2",
     scripts=["jblack/jblack"],
     author="QuentinN42",
     author_email="jupyter.black@gmail.com",

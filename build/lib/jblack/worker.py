@@ -1,4 +1,4 @@
-from jblack.useful import get_json, write_json
+from .useful import get_json, write_json
 import subprocess
 import os
 
@@ -32,6 +32,9 @@ def formatter(filename: str, tmpfile_name: str, args: list = None):
 
             # rewrite
             json["cells"][i]["source"] = [e + "\n" for e in tmpfile_content.split("\n")]
+            json["cells"][i]["source"] = json["cells"][i]["source"][:-1]
+            if len(json["cells"][i]["source"]) != 0:
+                json["cells"][i]["source"][-1] = json["cells"][i]["source"][-1][:-1] 
 
     write_json(filename, json)
     subprocess.call(["rm", tmpfile_name])

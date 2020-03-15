@@ -1,6 +1,6 @@
 import argparse
-from jblack.useful import get_json
-from jblack.worker import main as work
+from .useful import get_json
+from .worker import main as work
 import os
 
 
